@@ -4,7 +4,7 @@ This portfolio uses AWS & ReactJS.
 
 # Technologies used
 
-Brew
+Chocolatey or Brew
 Git and GitHub
 SSH
 HTML
