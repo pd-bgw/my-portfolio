@@ -11,3 +11,7 @@ HTML,
 CSS,
 Font Awesome,
 Google Fonts
+
+# AWS
+
+S3, CodeBuild, Lambda, CodePipeline
