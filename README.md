@@ -25,6 +25,15 @@ Python, IPython, PowerShell, Command Prompt, Atom
 
     - I manually updated index.html to S3 portfolio and it worked
     - Going to modify index.html and push it to GitHub, so CodePipeline can run another release.
+        - index.html was overwritten with older version!
+
+    - Ran lambda py script and index.html didn't updated
+    - Ran Build, then py script and index.html did updated
+    - Ran from CodePipeline and index.html is good to go
+    - Now start from scratch
+        - make small change to index.html
+        - push to GitHub - see what happens?
+        
 
 2. ** Changes made to .py upload file need to be maintain in 2 places **
     - AWS Lambda
