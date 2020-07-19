@@ -23,6 +23,9 @@ Python, IPython, PowerShell, Command Prompt, Atom
     - CodePipeline everything successful
     - Log files show index.html in portfolio build
 
+    - I manually updated index.html to S3 portfolio and it worked
+    - Going to modify index.html and push it to GitHub, so CodePipeline can run another release.
+
 2. ** Changes made to .py upload file need to be maintain in 2 places **
     - AWS Lambda
     - Local repository
