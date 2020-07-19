@@ -27,7 +27,8 @@ def lambda_handler(event, context):
                     location = artifact["location"]["s3Location"]
 
         # make log entry
-        print "Building portfolio from " + str(location)
+        print("## Building portfolio from")
+        print(str(location))
 
         s3 = boto3.resource('s3')
 
@@ -42,17 +43,18 @@ def lambda_handler(event, context):
         # 7/18/20 codepiple
         build_bucket.download_fileobj(location["objectKey"], portfolio_zip)
 
+        print("## Build bucket zip files")
+
         with zipfile.ZipFile(portfolio_zip) as myzip:
             for nm in myzip.namelist():
                 obj = myzip.open(nm)
                 portfolio_bucket.upload_fileobj(obj, nm,
                 ExtraArgs={'ContentType': mimetypes.guess_type(nm)[0]})
                 portfolio_bucket.Object(nm).Acl().put(ACL='public-read')
-                #print nm
-
+                print(nm)
 
         # make log entry
-        print "Job Completed!"
+        print("## Job Completed!")
         topic.publish(Message="Deployed sucessfully! (lambda python boto3 sns)", Subject="Portfolio Deployed")
         # 7/18/20 we need to let codepipline know that it ran successfully.
         # codepipeline can't figure it out on its own
