@@ -12,7 +12,7 @@ import mimetypes
 def lambda_handler(event, context):
 
     print("## Job Started ##")
-    print("upload_portfolio_lambda.py")
+    print("## upload_portfolio_lambda.py")
 
     # 7/18/20 if we run outside of codepipeline
     location = {
@@ -31,7 +31,7 @@ def lambda_handler(event, context):
 
         # make log entry
         print("## Building portfolio from")
-        print(str(location))
+        print("## " + str(location))
 
         s3 = boto3.resource('s3')
 
@@ -54,7 +54,7 @@ def lambda_handler(event, context):
                 portfolio_bucket.upload_fileobj(obj, nm,
                 ExtraArgs={'ContentType': mimetypes.guess_type(nm)[0]})
                 portfolio_bucket.Object(nm).Acl().put(ACL='public-read')
-                print(nm)
+                print("## " + nm)
 
         # make log entry
         print("## Job Completed! ##")
