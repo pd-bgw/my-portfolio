@@ -11,6 +11,9 @@ import mimetypes
 
 def lambda_handler(event, context):
 
+    print("## Job Started ##")
+    print("upload_portfolio_lambda.py")
+
     # 7/18/20 if we run outside of codepipeline
     location = {
         "bucketName": 'portfoliobuild.bluegreywall.com',
@@ -54,7 +57,7 @@ def lambda_handler(event, context):
                 print(nm)
 
         # make log entry
-        print("## Job Completed!")
+        print("## Job Completed! ##")
         topic.publish(Message="Deployed sucessfully! (lambda python boto3 sns)", Subject="Portfolio Deployed")
         # 7/18/20 we need to let codepipline know that it ran successfully.
         # codepipeline can't figure it out on its own
