@@ -4,13 +4,7 @@ This portfolio uses AWS & ReactJS.
 
 # Technologies used
 
-Chocolatey or Brew,
-Git and GitHub,
-SSH,
-HTML,
-CSS,
-Font Awesome,
-Google Fonts
+Chocolatey or Brew, Git and GitHub, SSH, HTML, CSS, Font Awesome, Google Fonts
 
 #
 
@@ -22,10 +16,16 @@ Python, IPython, PowerShell, Command Prompt, Atom
 
 # Issues
 
-1. Changes made to .py upload file needs to be maintain in 2 places.
-    a. AWS Lambda
-    b. local repository, and GitHub
+1. 7/19/20 Deployment Issues
+    - index.html is not updating
+    - Other files I have changed has updated
+        - upload_portfolio_lambda.py
+        - README.md
+    - no other know update Issues
 
+2. Changes made to .py upload file needs to be maintain in 2 places.
+    - AWS Lambda
+    - Local repository
 
 
 - [x] test
