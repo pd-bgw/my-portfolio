@@ -14,8 +14,8 @@ Google Fonts
 
 #
 
-AWS: S3, CodeBuild, Lambda, CodePipeline, SNS, Boto3
+AWS: S3, CodeBuild, Lambda, CodePipeline, SNS, Boto3, CLI
 
 #
 
-Python, iPython
+Python, iPython, PowerShell, Atom
